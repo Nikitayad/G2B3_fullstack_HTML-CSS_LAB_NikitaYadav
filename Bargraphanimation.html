@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Bar Graphs</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            width: 400px;
+            height: 300px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .bar-graph {
+            width: 30%;
+            height: 100%;
+            background-color: #3498db;
+            margin: 0 10px;
+            transition: height 1s ease-in-out;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .bar-graph::before {
+            content: attr(data-percent) "%";
+            display: block;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .bar-plot {
+            font-size: 28px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Animation */
+        .bar-graph[data-percent="30"] {
+            animation: animateBar1 1s ease-in-out 0.5s forwards;
+        }
+
+        .bar-graph[data-percent="40"] {
+            animation: animateBar2 1s ease-in-out 0.5s forwards;
+        }
+
+        .bar-graph[data-percent="80"] {
+            animation: animateBar3 1s ease-in-out 0.5s forwards;
+        }
+
+        @keyframes animateBar1 {
+            to {
+                height: 30%;
+            }
+        }
+
+        @keyframes animateBar2 {
+            to {
+                height: 40%;
+            }
+        }
+
+        @keyframes animateBar3 {
+            to {
+                height: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bar-graph" data-percent="30"></div>
+        <div class="bar-graph" data-percent="40"></div>
+        <div class="bar-graph" data-percent="80"></div>
+        <h1 class="bar-plot">Bar Plot</h1>
+    </div>
+    
+</body>
+</html>

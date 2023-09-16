@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail Account Creation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .background {
+            background-image: url('https://i.pinimg.com/originals/c5/5d/72/c55d724f878fb587e4d1ad15d0107b9e.gif');
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .account-form {
+            background-color: rgba(70, 130, 180, 0.35); /* Steel Blue with opacity */
+            border: 1px solid #ccc;
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+            color: white;
+        }
+
+        .account-form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .account-form input[type="text"],
+        .account-form input[type="email"],
+        .account-form input[type="password"],
+        .account-form select,
+        .account-form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: transparent;
+            color: white;
+        }
+
+        .account-form input[type="text"]:focus,
+        .account-form input[type="email"]:focus,
+        .account-form input[type="password"]:focus,
+        .account-form select:focus {
+            background-color: rgba(70, 130, 180, 0.35);
+        }
+
+        .account-form button {
+            background-color: #4285f4; /* Google Blue */
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .account-form button[type="reset"] {
+            background-color: #ccc;
+            color: #333;
+            margin-left: 10px;
+        }
+
+        .account-form button[type="submit"]:hover,
+        .account-form button[type="reset"]:hover {
+            background-color: #357dbb;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <form class="account-form">
+            <h1>Create your Google Account</h1>
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" required>
+            
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" required>
+
+            <label for="username">Choose your username</label>
+            <input type="email" id="username" name="username" required>
+
+            <label for="password">Create a password</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm-password">Confirm your password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <label for="birthdate">Birthday</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <p>By clicking "Next," you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
+
+            <button type="submit">Next</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+</body>
+</html>
